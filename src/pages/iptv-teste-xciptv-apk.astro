@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import Features from '../components/Features.astro';
+import Benefits from '../components/Benefits.astro';
+import Testimonials from '../components/Testimonials.astro';
+import CTA from '../components/CTA.astro';
+import Footer from '../components/Footer.astro';
+
+const title = 'IPTV Teste XCIPTV APK: Teste Grátis e Acesso Imediato';
+const description =
+  'Faça seu iptv teste xciptv apk sem compromisso. Baixe o XCIPTV, receba acesso instantâneo e teste canais, filmes e séries antes de comprar.';
+---
+
+<BaseLayout title={title} description={description} canonicalPath="/iptv-teste-xciptv-apk/">
+  <Hero />
+  <main id="main">
+    <Features />
+    <Benefits />
+    <Testimonials />
+    <CTA />
+  </main>
+  <Footer />
+</BaseLayout>

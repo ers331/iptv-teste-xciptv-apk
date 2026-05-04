@@ -1,0 +1,46 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath?: string;
+  lang?: string;
+}
+
+const { title, description, canonicalPath, lang = 'pt-BR' } = Astro.props;
+const canonical = new URL(canonicalPath || Astro.url.pathname, Astro.site || 'https://example.com');
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <meta name="google-site-verification" content="_xTa-Z7g-g5Uswl7dyA1bUNtpN_oFPGDB4m9k04BIvQ" />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="XCIPTV Teste IPTV" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content={new URL('/images/hero-xciptv-tv.jpg', Astro.site || 'https://example.com')} />
+    <meta property="og:image:alt" content="Aplicativo XCIPTV aberto em uma TV para teste IPTV" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL('/images/hero-xciptv-tv.jpg', Astro.site || 'https://example.com')} />
+    <meta name="theme-color" content="#6000ff" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@500;700&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+    <slot />
+  </body>
+</html>

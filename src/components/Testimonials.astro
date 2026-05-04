@@ -1,0 +1,121 @@
+---
+const testimonials = [
+  {
+    quote: 'Fiz o teste no Android TV e consegui validar os canais principais antes de contratar.',
+    name: 'Cliente Android TV',
+    role: 'Teste concluído'
+  },
+  {
+    quote: 'O passo a passo ajudou porque o erro era só a URL do servidor digitada com espaço no final.',
+    name: 'Usuário XCIPTV',
+    role: 'Configuração validada'
+  },
+  {
+    quote: 'Usei o teste para conferir filmes, séries e canais esportivos no horário em que mais assisto.',
+    name: 'Assinante em avaliação',
+    role: 'Teste IPTV grátis'
+  }
+];
+
+const faqs = [
+  {
+    question: 'Como configurar XCIPTV para iptv teste xciptv apk?',
+    answer:
+      'Abra o XCIPTV, escolha login por Xtream Codes e informe URL do servidor, usuário e senha exatamente como recebeu. Depois aguarde a lista sincronizar.'
+  },
+  {
+    question: 'O teste iptv grátis no XCIPTV é realmente sem compromisso?',
+    answer:
+      'O teste serve para validar compatibilidade antes da contratação. Ele costuma ter tempo limitado e não obriga compra, desde que o provedor ofereça essa condição.'
+  },
+  {
+    question: 'O XCIPTV APK já vem com canais liberados?',
+    answer:
+      'Não. O XCIPTV é apenas o player. Para assistir, você precisa de dados de acesso fornecidos pelo serviço IPTV.'
+  },
+  {
+    question: 'Por que aparece erro de login no XCIPTV?',
+    answer:
+      'As causas mais comuns são URL incorreta, usuário ou senha digitados errado, teste expirado, internet instável ou servidor temporariamente fora do ar.'
+  },
+  {
+    question: 'Posso usar o mesmo teste em TV Box e celular?',
+    answer:
+      'Depende da regra do acesso. Muitos testes permitem apenas uma conexão simultânea, então usar dois aparelhos ao mesmo tempo pode bloquear a sessão.'
+  },
+  {
+    question: 'O que avaliar durante o teste XCIPTV rápido?',
+    answer:
+      'Teste canais ao vivo, filmes, séries, esportes, tempo de abertura, qualidade de imagem, áudio, travamentos e funcionamento no seu aparelho principal.'
+  }
+];
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer
+    }
+  }))
+};
+---
+
+<section class="section section-proof" id="testimonials" aria-labelledby="testimonials-title">
+  <div class="container">
+    <div class="proof-band" aria-label="Métricas do teste">
+      <div><strong>4-24h</strong><span>tempo limitado</span></div>
+      <div><strong>3 dados</strong><span>URL, usuário e senha</span></div>
+      <div><strong>Sem plano</strong><span>teste antes de comprar</span></div>
+    </div>
+
+    <div class="section-heading centered-heading">
+      <p class="eyebrow">Por que testar antes?</p>
+      <h2 id="testimonials-title">Teste XCIPTV rápido para confirmar qualidade antes de contratar</h2>
+      <p>
+        Um bom teste reduz risco. Você descobre se o app abre bem no seu aparelho,
+        se os canais importantes estão disponíveis e se a conexão aguenta o uso real.
+      </p>
+    </div>
+
+    <div class="testimonial-grid">
+      {testimonials.map((item) => (
+        <figure class="testimonial-card">
+          <blockquote>{item.quote}</blockquote>
+          <figcaption>
+            <span>{item.name}</span>
+            <small>{item.role}</small>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+
+    <div class="mid-cta">
+      <div>
+        <h3>Pronto para validar no seu aparelho?</h3>
+        <p>Peça acesso instantâneo, configure o app e teste sem compromisso.</p>
+      </div>
+      <a class="button button-primary" href="#offer">Receber acesso imediato</a>
+    </div>
+
+    <div class="faq-block" id="faq">
+      <div class="section-heading">
+        <p class="eyebrow">FAQ otimizado</p>
+        <h2>Problemas comuns no XCIPTV e soluções rápidas</h2>
+        <p>Respostas diretas para quem quer testar IPTV rápido sem perder tempo.</p>
+      </div>
+      <div class="faq-list">
+        {faqs.map((faq) => (
+          <article class="faq-item">
+            <h3>{faq.question}</h3>
+            <p>{faq.answer}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </div>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+</section>

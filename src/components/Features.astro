@@ -1,0 +1,47 @@
+---
+const features = [
+  ['APP', 'Player IPTV simples', 'O XCIPTV organiza canais, filmes, séries e guia de programação quando o acesso oferece esses recursos.'],
+  ['APK', 'XCIPTV APK download', 'Instale o aplicativo em Android TV, TV Box ou celular Android usando uma fonte confiável.'],
+  ['LOGIN', 'Acesso por usuário e senha', 'O teste normalmente usa URL do servidor, usuário e senha para carregar a lista no app.'],
+  ['LIVE', 'Canais ao vivo', 'Confira abertura dos canais, estabilidade, áudio, legenda e qualidade de imagem.'],
+  ['VOD', 'Filmes e séries', 'Use o teste iptv grátis para validar se a biblioteca atende ao que você procura.'],
+  ['SUP', 'Ajuda na configuração', 'Siga o passo a passo para evitar erro de login, URL incorreta ou lista não carregada.']
+];
+---
+
+<section class="section section-soft" id="o-que-e" aria-labelledby="features-title">
+  <div class="container">
+    <div class="section-heading centered-heading">
+      <p class="eyebrow">O que é XCIPTV</p>
+      <h2 id="features-title">Como funciona o iptv teste xciptv apk grátis?</h2>
+      <p>
+        XCIPTV é um aplicativo player. Ele não fornece canais sozinho: você usa o app
+        para inserir os dados do seu teste e assistir ao conteúdo liberado pelo provedor.
+        Isso torna o processo direto para quem quer testar IPTV antes de pagar.
+      </p>
+    </div>
+
+    <div class="features-grid">
+      {features.map(([icon, title, text]) => (
+        <article class="feature-card">
+          <div class="feature-icon" aria-hidden="true">{icon}</div>
+          <h3>{title}</h3>
+          <p>{text}</p>
+        </article>
+      ))}
+    </div>
+
+    <div class="mid-cta" id="como-funciona">
+      <div>
+        <p class="eyebrow">Como o teste funciona</p>
+        <h3>Receba acesso, configure o XCIPTV e teste sem compromisso.</h3>
+        <p>
+          O acesso de teste costuma ser limitado por tempo, geralmente entre 4 e 24 horas.
+          Nesse período, você valida estabilidade, categorias, canais favoritos e compatibilidade
+          com sua TV Box, Android TV ou celular.
+        </p>
+      </div>
+      <a class="button button-primary" href="#offer">Testar XCIPTV grátis</a>
+    </div>
+  </div>
+</section>

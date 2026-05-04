@@ -1,0 +1,143 @@
+---
+const steps = [
+  {
+    title: '1. Faça o xciptv apk download',
+    text: 'Baixe o XCIPTV em uma fonte confiável ou pela loja do seu dispositivo quando disponível. Evite APKs desconhecidos.'
+  },
+  {
+    title: '2. Solicite o acesso de teste',
+    text: 'Peça o teste XCIPTV rápido e receba os dados: URL do servidor, usuário e senha.'
+  },
+  {
+    title: '3. Abra o XCIPTV e escolha Xtream Codes',
+    text: 'Na tela de login, selecione o modo compatível e digite os dados exatamente como foram enviados.'
+  },
+  {
+    title: '4. Aguarde a lista carregar',
+    text: 'O app pode levar alguns segundos para sincronizar canais, filmes, séries e guia de programação.'
+  },
+  {
+    title: '5. Teste antes de comprar',
+    text: 'Abra canais diferentes, confira esportes, VOD, estabilidade no Wi-Fi e desempenho no dispositivo principal.'
+  }
+];
+
+const benefits = [
+  'Evite contratar serviços instáveis: Valide se o sinal roda bem no seu aparelho antes de pagar.',
+  'Confirmação de Grade: Verifique se todos os canais e categorias que você deseja estão disponíveis.',
+  'Qualidade de Imagem: Teste a resolução, tempo de abertura dos canais e ausência de travamentos.',
+  'Domínio da Configuração: Aprenda a configurar o XCIPTV APK corretamente para evitar erros de login.'
+];
+---
+
+<section class="section" id="download" aria-labelledby="benefits-title">
+  <div class="container benefits-layout">
+    <div class="section-heading">
+      <p class="eyebrow">Guia rápido</p>
+      <h2 id="benefits-title">Como fazer iptv teste xciptv apk passo a passo</h2>
+      <p>
+        O melhor teste é aquele que simula seu uso real. Configure o app no mesmo aparelho
+        que você pretende usar, teste nos horários de maior movimento e confira se o conteúdo
+        abre sem dificuldade.
+      </p>
+      <ul class="check-list">
+        {benefits.map((item) => <li>{item}</li>)}
+      </ul>
+      <a class="button button-primary" href="#offer">Receber acesso imediato</a>
+    </div>
+
+    <div class="benefit-list" id="configurar">
+      {steps.map((step, index) => (
+        <article
+          class="benefit-item"
+          style={`top: 2rem; z-index: ${index + 1};`}
+        >
+          <span class="step-number">{String(index + 1).padStart(2, '0')}</span>
+          <div class="step-content">
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .benefits-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .section-heading {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+  }
+
+  .benefit-list {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem; /* Espaçamento maior para que o usuário sinta a subida do card */
+  }
+
+  .benefit-item {
+    position: sticky;
+    background-color: #ffffff !important;
+    border: 1px solid #e5e7eb;
+    border-radius: 1.25rem;
+    padding: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border-color: #6000ff;
+  }
+
+  .step-number {
+    font-weight: 800;
+    color: #6000ff;
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+  }
+
+  .step-content h3 {
+    margin: 0 0 0.75rem 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .step-content p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #4b5563;
+  }
+
+  @media (max-width: 768px) {
+    .benefits-layout {
+      flex-direction: column;
+    }
+    .benefit-item {
+      position: static;
+      margin-bottom: 1rem;
+    }
+    .section-heading, .benefit-list {
+      max-width: 100%;
+    }
+  }
+</style>

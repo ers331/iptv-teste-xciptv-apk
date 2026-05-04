@@ -1,0 +1,68 @@
+---
+const stats = [
+  { value: '4-24h', label: 'teste limitado' },
+  { value: 'Agora', label: 'acesso instantâneo' },
+  { value: 'Grátis', label: 'sem compromisso' }
+];
+---
+
+<header class="hero">
+  <div class="nav-shell">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a class="brand" href="/iptv-teste-xciptv-apk/" aria-label="XCIPTV Teste IPTV home">
+        <span class="brand-mark">X</span>
+        <span>
+          <strong>XCIPTV Teste</strong>
+          <small>Configuração IPTV APK</small>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a href="#o-que-e">O que é</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#configurar">Passo a passo</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="nav-cta" href="#offer">Acesso imediato</a>
+    </nav>
+  </div>
+
+  <section class="hero-content container" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow hero-kicker">Teste XCIPTV rápido antes de comprar</p>
+      <h1 id="hero-title">Melhor IPTV Teste XCIPTV APK para Android e TV Box</h1>
+      <p class="hero-subtitle">
+        Faça seu iptv teste xciptv apk com acesso rápido, sem compromisso e com
+        instruções simples para baixar o app, configurar o login e validar canais,
+        filmes e séries antes de escolher um plano.
+      </p>
+      <div class="hero-actions" aria-label="Ações principais">
+        <a class="button button-primary" href="#offer">Iniciar teste IPTV agora</a>
+        <a class="button button-secondary" href="#configurar">Como configurar XCIPTV</a>
+      </div>
+      <div class="hero-stats" aria-label="Destaques do teste">
+        {stats.map((item) => (
+          <div>
+            <strong>{item.value}</strong>
+            <span>{item.label}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="device-showcase hero-image-showcase" aria-label="Imagem real do XCIPTV configurado na TV">
+      <figure class="hero-real-image">
+        <img
+          src="/images/hero-xciptv-tv.jpg"
+          alt="Aplicativo XCIPTV aberto em uma TV para iptv teste xciptv apk"
+          width="700"
+          height="394"
+          loading="eager"
+        />
+        <figcaption>
+          <span>Acesso de teste</span>
+          <strong>XCIPTV APK em TV Box ou Android TV</strong>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+</header>

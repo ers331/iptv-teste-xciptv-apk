@@ -1,0 +1,36 @@
+---
+const year = new Date().getFullYear();
+
+const internalLinks = [
+  { href: '#o-que-e', label: 'O que é XCIPTV' },
+  { href: '#download', label: 'XCIPTV APK download' },
+  { href: '#configurar', label: 'Como configurar XCIPTV' },
+  { href: '#faq', label: 'FAQ do teste IPTV' },
+  { href: '/politica-de-privacidade', label: 'Política de Privacidade' }
+];
+
+const suggestedLinks = [
+  { href: '/xciptv-apk-download/', label: 'Guia de xciptv apk download' },
+  { href: '/como-configurar-xciptv/', label: 'Como configurar XCIPTV' },
+  { href: '/teste-iptv-gratis/', label: 'Teste IPTV grátis' }
+];
+---
+
+<footer class="site-footer">
+  <div class="container footer-layout">
+    <a class="brand footer-brand" href="/iptv-teste-xciptv-apk/" aria-label="XCIPTV Teste IPTV home">
+      <span class="brand-mark">X</span>
+      <span>
+        <strong>XCIPTV Teste</strong>
+        <small>IPTV APK setup</small>
+      </span>
+    </a>
+    <nav aria-label="Links internos da página">
+      {internalLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+    </nav>
+    <nav class="footer-suggestions" aria-label="Sugestões de links internos para SEO">
+      {suggestedLinks.map((link) => <a href={link.href}>{link.label}</a>)}
+    </nav>
+    <p>&copy; {year} XCIPTV Teste. Aplicativo e conteúdo dependem do provedor de acesso.</p>
+  </div>
+</footer>
